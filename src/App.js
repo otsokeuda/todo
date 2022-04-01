@@ -5,16 +5,17 @@ import Logo from './Logo';
 import Link from './Link';
 
 function App() {
-  const todo = ["aaaaaa", "bbbbbbb", "cccccccc", "dddddddd"];
-  todo.map(todo => {
-    <div>{todo}</div>
-  });
+  const todo = ["aaaaaa", "bbbbbbb", "cccccccc", "dddddddd"];  
 
   return (
     <div className="App">
       <header className="App-header">
         <Logo />
-        <Instructions />
+
+        {todo.map(item => {
+        <div>{}</div>
+        })}
+
         <Link />
       </header>
     </div>
