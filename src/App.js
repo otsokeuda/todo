@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Logo />
-        <Instructions />
+        <Instructions text="This is new instruction" />
         <Link />
       </header>
     </div>
