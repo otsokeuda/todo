@@ -2,7 +2,7 @@ function Instructions(props) {
     console.log(props)
     return (
         <p>
-        {props.todo}
+        {props.item}
       </p>
     );
   }

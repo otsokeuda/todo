@@ -12,9 +12,7 @@ function App() {
       <header className="App-header">
         <Logo />
 
-        {todo.map(item => {
-        <div>{}</div>
-        })}
+        {todo.map(item => <Instructions text={item} />)}
 
         <Link />
       </header>
