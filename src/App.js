@@ -5,11 +5,16 @@ import Logo from './Logo';
 import Link from './Link';
 
 function App() {
+  const todo = ["aaaaaa", "bbbbbbb", "cccccccc", "dddddddd"];
+  todo.map(todo => {
+    <div>{todo}</div>
+  });
+
   return (
     <div className="App">
       <header className="App-header">
         <Logo />
-        <Instructions text="This is new instruction" />
+        <Instructions />
         <Link />
       </header>
     </div>
