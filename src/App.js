@@ -5,7 +5,8 @@ import Logo from './Logo';
 import Link from './Link';
 
 function App() {
-  const tehtavaLista = ["aaaaaa", "bbbbbbb", "cccccccc", "dddddddd"];  
+  const tehtavaLista = ["aaaaaa", "bbbbbbb", "cccccccc", "dddddddd"];
+  
 
   return (
     <div className="App">
@@ -14,7 +15,7 @@ function App() {
 
         {tehtavaLista.map(tehtava => <Instructions kuvaus={tehtava} />)}
 
-        <Link text="tekstiä"/>
+        <Link text="tekstiä" target="https://reactjs.org" />
       </header>
     </div>
   );
