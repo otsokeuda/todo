@@ -1,12 +1,9 @@
-function Link() {
+function Link(props) {
+  console.log(props)
+  
     return (
-        <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
+        <a class="text" href = "https://reactjs.org" >
+       {props.text}       
       </a>
     );
   }

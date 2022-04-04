@@ -14,7 +14,7 @@ function App() {
 
         {tehtavaLista.map(tehtava => <Instructions kuvaus={tehtava} />)}
 
-        <Link />
+        <Link text="tekstiä"/>
       </header>
     </div>
   );
