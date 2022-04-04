@@ -5,14 +5,14 @@ import Logo from './Logo';
 import Link from './Link';
 
 function App() {
-  const todo = ["aaaaaa", "bbbbbbb", "cccccccc", "dddddddd"];  
+  const tehtavaLista = ["aaaaaa", "bbbbbbb", "cccccccc", "dddddddd"];  
 
   return (
     <div className="App">
       <header className="App-header">
         <Logo />
 
-        {todo.map(item => <Instructions text={item} />)}
+        {tehtavaLista.map(tehtava => <Instructions kuvaus={tehtava} />)}
 
         <Link />
       </header>
