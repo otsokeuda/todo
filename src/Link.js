@@ -2,10 +2,9 @@ function Link(props) {
   console.log(props)
   
     return (
-        <a class="text" href="target" >
-       {props.text}
-       {props.target}       
-      </a>
+        <a href={props.target} class="text">    
+       {props.text}   
+      </a>    
     );
   }
   export default Link;
