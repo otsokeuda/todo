@@ -1,17 +1,16 @@
 
 import './App.css';
 import Instructions from './Instructions';
-import Logo from './Logo';
+import Counter from './Counter';
 import Link from './Link';
 
 function App() {
   const tehtavaLista = ["aaaaaa", "bbbbbbb", "cccccccc", "dddddddd"];
-  
 
   return (
     <div className="App">
       <header className="App-header">
-        <Logo />
+        <Counter list={tehtavaLista.length}/>
 
         {tehtavaLista.map(tehtava => <Instructions kuvaus={tehtava} />)}
 
