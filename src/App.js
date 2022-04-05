@@ -5,25 +5,37 @@ import Counter from './Counter';
 import Link from './Link';
 
 function App() {
-  const tehtavaLista = [
-    {
-      id: 1,
-      title: 'Osta banaania',
-      completed: false,
-    },
-    {
-      id: 2,
-      title: 'Soita kaverille',
-      completed: false,
-    },
-  ];
+ 
+
+  const [items, setItems] = React.useState([]);
+  const [task, setTask] = React.useState("");
   
-  const [items, setItems] = React.useState(tehtavaLista);
+  function handleChange(event) {
+    setTask(event.target.value);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    const uusiTehtava = {
+      id: items.length + 1,
+      title: task,
+      completed: false     
+    }
+    setItems(items.concat(uusiTehtava));
+    setTask("");
+    }
+  
 
   return (
     <div className="App">
       <header className="App-header">
-        <Counter list={tehtavaLista.length}/>
+        <Counter list={items.length}/>
+
+        <form>
+          <input type="text" value={task} onChange={handleChange}/>
+          <button className="button" onClick={handleSubmit}>LISÄÄ</button>
+          
+        </form>
 
         {items.map(tehtava => <Instructions kuvaus={tehtava.title} />)}
 
