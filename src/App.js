@@ -25,7 +25,13 @@ function App() {
     }
 
     function onSelectRow(id) {
-      alert(id);
+      const updated = items.map(tehtava => {
+        if (tehtava.id === id) {
+          return {...tehtava, completed: true}
+        }
+        return tehtava;
+      });
+      setItems(updated);
     }
   
 
