@@ -27,7 +27,7 @@ function App() {
     function onSelectRow(id) {
       const updated = items.map(tehtava => {
         if (tehtava.id === id) {
-          return {...tehtava, completed: true}
+          return {...tehtava, completed: false}
         }
         return tehtava;
       });
@@ -46,7 +46,7 @@ function App() {
           
         </form>
 
-        {items.map(tehtava => <Instructions klikkaus={onSelectRow} kuvaus={tehtava.title} thid={tehtava.id}/>)}
+        {items.map(tehtava => <Instructions klikkaus={onSelectRow} kuvaus={tehtava.title} thid={tehtava.id} valmis={tehtava.completed} />)}
 
         <Link text="linkki" target="https://reactjs.org" />
       </header>
