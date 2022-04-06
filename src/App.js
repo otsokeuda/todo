@@ -5,7 +5,6 @@ import Counter from './Counter';
 import Link from './Link';
 
 function App() {
- 
 
   const [items, setItems] = React.useState([]);
   const [task, setTask] = React.useState("");
@@ -24,6 +23,10 @@ function App() {
     setItems(items.concat(uusiTehtava));
     setTask("");
     }
+
+    function onSelectRow(id) {
+      alert(id);
+    }
   
 
   return (
@@ -37,9 +40,9 @@ function App() {
           
         </form>
 
-        {items.map(tehtava => <Instructions kuvaus={tehtava.title} />)}
+        {items.map(tehtava => <Instructions klikkaus={onSelectRow} kuvaus={tehtava.title} />)}
 
-        <Link text="tekstiä" target="https://reactjs.org" />
+        <Link text="linkki" target="https://reactjs.org" />
       </header>
     </div>
   );

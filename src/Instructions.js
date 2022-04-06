@@ -1,8 +1,8 @@
 function Instructions(props) {
     console.log(props)
     return (
-        <p>
-        {props.kuvaus}
+        <p onClick={() => props.klikkaus()}>
+        {props.kuvaus}       
       </p>
     );
   }
