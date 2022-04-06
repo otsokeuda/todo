@@ -40,7 +40,7 @@ function App() {
           
         </form>
 
-        {items.map(tehtava => <Instructions klikkaus={onSelectRow} kuvaus={tehtava.title} />)}
+        {items.map(tehtava => <Instructions klikkaus={onSelectRow} kuvaus={tehtava.title} thid={tehtava.id}/>)}
 
         <Link text="linkki" target="https://reactjs.org" />
       </header>
