@@ -38,7 +38,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Counter list={items.length}/>
+        <Counter list={items}/>
 
         <form>
           <input type="text" value={task} onChange={handleChange}/>
