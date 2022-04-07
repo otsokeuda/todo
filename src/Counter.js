@@ -9,7 +9,7 @@ function Counter(props) {
   );
     return (
       <p class="list">
-         {valmiit.lenght}
+         {valmiit.length}
       </p>
     );
   }
