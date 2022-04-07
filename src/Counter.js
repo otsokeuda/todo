@@ -1,21 +1,16 @@
 function Counter(props) {
-    console.log(props)
-
-    const valmiit = props.list.filter(
-      tehtava => {
-        if (tehtava < 5) { return true }
-        return false;
-        console.log(tehtava)
-      }
-    );
-
-    
-    
-      return (
-          <p class="list"> 
-           {props.list}
-            
-        </p>              
-      );
+  const valmiit = props.list.filter(
+    tehtava => {
+      
+      console.log(tehtava);
+      if (tehtava.completed === true) { return true }
+      return false;
     }
-    export default Counter;
+  );
+    return (
+      <p class="list">
+         {valmiit.lenght}
+      </p>
+    );
+  }
+  export default Counter;

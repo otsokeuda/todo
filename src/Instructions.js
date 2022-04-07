@@ -1,7 +1,6 @@
 function Instructions(props) {
-    console.log(props)
     
-    if (props.valmis === false ) {
+    if (props.valmis === true ) {
       return null;
    }
    

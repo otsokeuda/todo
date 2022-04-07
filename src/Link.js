@@ -1,5 +1,4 @@
 function Link(props) {
-  console.log(props)
   
     return (
         <a href={props.target} class="text">    
