@@ -10,6 +10,8 @@ function Counter(props) {
     return (
       <p class="list">
          {valmiit.length}
+         {" / "}
+         {props.list.length}
       </p>
     );
   }

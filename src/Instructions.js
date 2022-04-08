@@ -1,7 +1,9 @@
 function Instructions(props) {
     
     if (props.valmis === true ) {
-      return null;
+      return (
+      <p>{props.kuvaus + " - valmis"}</p>
+      );
    }
    
     return (
