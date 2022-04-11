@@ -5,19 +5,23 @@ import Counter from './Counter';
 
 function App() {
 
-  const [items, setItems] = React.useState([]);
+  const tallennetutTehtavat = JSON.parse(localStorage.getItem("lista")) || [];
+  const [items, setItems] = React.useState([tallennetutTehtavat]);
   const [task, setTask] = React.useState("");
   
   function handleChange(event) {
     setTask(event.target.value);
   }
 
+  React.useEffect(() => {
+    localStorage.setItem("lista", JSON.stringify(items));
+  }, [items]);
   function handleSubmit(event) {
     event.preventDefault();
-    const uusiTehtava = {
+      const uusiTehtava = {
       id: items.length + 1,
       title: task,
-      completed: false     
+      completed: false  
     }
     setItems(items.concat(uusiTehtava));
     setTask("");
