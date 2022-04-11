@@ -6,7 +6,7 @@ import Counter from './Counter';
 function App() {
 
   const tallennetutTehtavat = JSON.parse(localStorage.getItem("lista")) || [];
-  const [items, setItems] = React.useState([tallennetutTehtavat]);
+  const [items, setItems] = React.useState(tallennetutTehtavat);
   const [task, setTask] = React.useState("");
   
   function handleChange(event) {
