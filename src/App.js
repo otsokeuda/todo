@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Instructions from './Instructions';
 import Counter from './Counter';
-import Link from './Link';
 
 function App() {
 
@@ -33,6 +32,10 @@ function App() {
       });
       setItems(updated);
     }
+
+    function clearItems() {
+      setItems([])
+    }
   
 
   return (
@@ -47,8 +50,9 @@ function App() {
         </form>
 
         {items.map(tehtava => <Instructions klikkaus={onSelectRow} kuvaus={tehtava.title} thid={tehtava.id} valmis={tehtava.completed} />)}
+        <p></p>
+        <button className="button" onClick={clearItems}>TYHJENNÄ</button>
 
-        <Link text="linkki" target="https://reactjs.org" />
       </header>
     </div>
   );

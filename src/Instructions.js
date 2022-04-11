@@ -1,8 +1,10 @@
+import check from './check.png';
+
 function Instructions(props) {
     
     if (props.valmis === true ) {
       return (
-      <p>{props.kuvaus + " - valmis"}</p>
+      <p>{props.kuvaus} <img src={check} alt="" width={20}/></p>
       );
    }
    
