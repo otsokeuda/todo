@@ -3,6 +3,7 @@ import './App.css';
 import Instructions from './Instructions';
 import Counter from './Counter';
 
+
 function App() {
 
   const tallennetutTehtavat = JSON.parse(localStorage.getItem("lista")) || [];
@@ -40,7 +41,8 @@ function App() {
     function clearItems() {
       setItems([])
     }
-  
+    
+    
 
   return (
     <div className="App">
@@ -49,13 +51,14 @@ function App() {
 
         <form>
           <input type="text" value={task} onChange={handleChange}/>
-          <button className="button" onClick={handleSubmit}>LISÄÄ</button>
-          
+          <button className="button" onClick={handleSubmit}>LISÄÄ</button> 
         </form>
 
         {items.map(tehtava => <Instructions klikkaus={onSelectRow} kuvaus={tehtava.title} thid={tehtava.id} valmis={tehtava.completed} />)}
-        <p></p>
+       
+        {items.length > 0 &&
         <button className="clear" onClick={clearItems}>TYHJENNÄ</button>
+        }
 
       </header>
     </div>
