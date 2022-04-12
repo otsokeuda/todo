@@ -1,10 +1,10 @@
-import check from './check.png';
+import {FcOk} from "react-icons/fc";
 
 function Instructions(props) {
     
     if (props.valmis === true ) {
       return (
-      <p>{props.kuvaus} <img src={check} alt="" width={20}/></p>
+      <p>{props.kuvaus} <FcOk/></p>
       );
    }
    
