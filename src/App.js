@@ -55,7 +55,7 @@ function App() {
 
         {items.map(tehtava => <Instructions klikkaus={onSelectRow} kuvaus={tehtava.title} thid={tehtava.id} valmis={tehtava.completed} />)}
         <p></p>
-        <button className="button" onClick={clearItems}>TYHJENNÄ</button>
+        <button className="clear" onClick={clearItems}>TYHJENNÄ</button>
 
       </header>
     </div>

@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.clear {
+  background-color: #F04444;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+form {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+} 
+
+input {
+  font-size: calc(10px + 2vmin);
+}
